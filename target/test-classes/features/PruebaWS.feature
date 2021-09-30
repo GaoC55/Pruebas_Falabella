@@ -10,10 +10,10 @@ Feature: Crear y obtener informacion del los empleados
       |  1 |
 
       Scenario Outline: Crear empleado
-    Given Obtener datos empleado
-    When Consumir Creacion WS <name> <salary> <age> <id>
+    Given Obtener datos empleado <name>,<salary>,<age>
+    When Consumir Creacion WS
     Then Confirmar Creacion
 
     Examples: 
-      | name      | salary | age | id |
-      |  German   | 12313  | 37  | 26 |
+      | name      | salary | age |
+      |  'Diana'   | 1231  | 36  |
